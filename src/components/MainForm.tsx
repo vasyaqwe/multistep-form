@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { variants } from "../utils"
 import { useStore } from "../useStore"
 
-import { DesktopNavButtons } from "../components/DesktopNavButtons"
-import { PersonalInfoStep } from "../components/PersonalInfoStep/PersonalInfoStep"
-import { SelectPlanStep } from "../components/SelectPlanStep/SelectPlanStep"
-import { PickAddOnsStep } from "../components/PickAddOnsStep/PickAddOnsStep"
-import { FinishingUpStep } from "../components/Steps/FinishingUpStep"
-import { ThankYouStep } from "../components/Steps/ThankYouStep"
+import { DesktopNavButtons } from "./DesktopNavButtons"
+import { PersonalInfoStep } from "./PersonalInfoStep/PersonalInfoStep"
+import { SelectPlanStep } from "./SelectPlanStep/SelectPlanStep"
+import { PickAddOnsStep } from "./PickAddOnsStep/PickAddOnsStep"
+import { FinishingUpStep } from "./FinishingUpStep/FinishingUpStep"
+import { ThankYouStep } from "./ThankYouStep"
 
 export const MainForm = () => {
     const steps = [

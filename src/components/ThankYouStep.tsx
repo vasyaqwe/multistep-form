@@ -1,4 +1,4 @@
-import checkmark from '../../assets/icon-thank-you.svg'
+import checkmark from '../assets/icon-thank-you.svg'
 
 export const ThankYouStep = () => {
 
