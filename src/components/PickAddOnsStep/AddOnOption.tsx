@@ -1,7 +1,7 @@
-import { AddOn } from "../types"
-import { useStore } from "../useStore"
-import { capitalize, getPerShortText, getPrice } from "../utils"
-import { Checkbox } from "./Checkbox"
+import { AddOn } from "../../types"
+import { useStore } from "../../useStore"
+import { capitalize, getPerShortText, getPrice } from "../../utils"
+import { Checkbox } from "../Checkbox"
 
 export const AddOnOption = ({ addOn }: { addOn: AddOn }) => {
     const { formData, onAddOnChange: onChange } = useStore()

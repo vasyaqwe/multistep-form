@@ -1,5 +1,5 @@
 import { useStore } from "../../useStore"
-import { AddOnOption } from "../AddOnOption"
+import { AddOnOption } from "./AddOnOption"
 import { FormWrapper } from "../FormWrapper"
 
 
