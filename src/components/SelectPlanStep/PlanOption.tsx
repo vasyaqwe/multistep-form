@@ -12,7 +12,7 @@ export const PlanOption = ({ title, price }: { price: number, title: string }) =
        `} htmlFor={title}>
             <input className="appearance-none " type="radio" value={title} checked={formData.plan.title === title}
                 name={title} id={title} onChange={onChange} />
-            <img src={planIconLookup[title]} alt={title + 'icon'} />
+            {planIconLookup[title]}
             <div className="md:mt-9">
                 <h3 className="text-primary-900 font-medium text-lg leading-tight">{capitalize(title)}</h3>
                 <small className="text-neutral-400 text-sm md:text-base">${getPrice(formData.billedYearly, price)}/{!formData.billedYearly ? 'mo' : 'yr'}</small>

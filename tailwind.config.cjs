@@ -5,22 +5,6 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // container: {
-    //   screens: {
-    //     sm: '640px',
-    //     md: '768px',
-    //     lg: '1204px',
-    //     xl: '1304px',
-    //     '2xl': '1204px',
-    //   },
-    // },
-    // screens: {
-    //   sm: '640px',
-    //   md: '768px',
-    //   lg: '1204px',
-    //   xl: '1304px',
-    //   '2xl': '1204px',
-    // },
     borderRadius: {
       'none': '0',
       'sm': '0.125rem',

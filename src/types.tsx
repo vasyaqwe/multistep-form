@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode } from "react"
+import { MouseEventHandler, ReactElement, ReactNode } from "react"
 import { FormData } from "./interfaces"
 
 export type FormWrapperProps = {
@@ -7,7 +7,7 @@ export type FormWrapperProps = {
     children: ReactNode;
 }
 export type planIconLookupType = {
-    [key: string]: string
+    [key: string]: ReactElement
 }
 export type ButtonProps = {
     onClick: MouseEventHandler<HTMLButtonElement>

@@ -1,12 +1,12 @@
-import iconAdvanced from './assets/icon-advanced.svg'
-import iconArcade from './assets/icon-arcade.svg'
-import iconPro from './assets/icon-pro.svg'
+import { ReactComponent as Advanced } from './assets/icon-advanced.svg'
+import { ReactComponent as Arcade } from './assets/icon-arcade.svg'
+import { ReactComponent as Pro } from './assets/icon-pro.svg'
 import { planIconLookupType } from './types'
 
 export const planIconLookup: planIconLookupType = {
-    'arcade': iconArcade,
-    'advanced': iconAdvanced,
-    'pro': iconPro,
+    'arcade': <Arcade />,
+    'advanced': <Advanced />,
+    'pro': <Pro />,
 }
 export const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1, str.length)
 

@@ -24,7 +24,7 @@ export const MainForm = () => {
     const heightLookup: { [key: number]: string } = {
         0: '370px',
         1: '520px',
-        2: '343px',
+        2: '353px',
         3: '303px',
         4: '276px'
     }
@@ -50,7 +50,7 @@ export const MainForm = () => {
                     exit="exit"
                     transition={{
                         x: { type: "spring", stiffness: 500, damping: 45 },
-                        opacity: { duration: .2 },
+                        opacity: { duration: .3 },
                     }}
                 >
                     {steps[currentStepIdx]}
