@@ -3,17 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { variants } from "../utils"
 import { useStore } from "../useStore"
 
-import { DesktopNavButtons } from "./DesktopNavButtons"
 import { PersonalInfoStep } from "./PersonalInfoStep/PersonalInfoStep"
 import { SelectPlanStep } from "./SelectPlanStep/SelectPlanStep"
 import { PickAddOnsStep } from "./PickAddOnsStep/PickAddOnsStep"
 import { FinishingUpStep } from "./FinishingUpStep/FinishingUpStep"
 import { ThankYouStep } from "./ThankYouStep"
-import { useWidth } from '../useWidth'
+import { forwardRef } from 'react'
 
-export const MainForm = () => {
-    const { smallScreen } = useWidth()
-
+export const MainForm = forwardRef<HTMLDivElement, { thankYouStepStyle: boolean }>((props, ref) => {
     const steps = [
         <PersonalInfoStep />,
         <SelectPlanStep />,
@@ -21,29 +18,15 @@ export const MainForm = () => {
         <FinishingUpStep />,
         <ThankYouStep />
     ]
-    const heightLookup: { [key: number]: string } = {
-        0: '370px',
-        1: '500px',
-        2: window.innerWidth < 375 ? '370px' : '339px',
-        3: window.innerWidth < 345 ? '373px' : '353px',
-        4: '276px'
-    }
 
-    const { currentStepIdx, animationDirection: direction, formSubmitted } = useStore()
-
-    const initialHeight = smallScreen ? direction >= 0 ? heightLookup[currentStepIdx - 1] : heightLookup[currentStepIdx + 1] : 'auto'
-    const animateHeight = smallScreen ? heightLookup[currentStepIdx] : 'auto'
-    const thankYouStepTop = !smallScreen && currentStepIdx === steps.length - 1 ? 'top-[25%] ' : ''
+    const { currentStepIdx, animationDirection: direction } = useStore()
 
     return (
-        <motion.form className={`main-form flex overflow-hidden md:h-[418px] relative`}
-            initial={{ height: initialHeight }}
-            animate={{ height: animateHeight }}
+        <motion.form className={`main-form flex overflow-hidden relative ${props.thankYouStepStyle ? 'min-h-[500px]' : ''}`}
         >
-            <AnimatePresence custom={direction}>
-                <motion.div
-
-                    className={`flex flex-col w-full top-0 flex-1 min-w-[100%] h-full md:h-auto ${thankYouStepTop}`} // if thank you step, center it
+            <AnimatePresence initial={false} custom={direction}>
+                <motion.div ref={ref}
+                    className={`flex flex-col w-full flex-1 min-w-[100%]`} // if thank you step, center it
                     key={currentStepIdx}
                     variants={variants}
                     custom={direction}
@@ -61,4 +44,5 @@ export const MainForm = () => {
             </AnimatePresence>
         </motion.form>
     )
-}
+})
+

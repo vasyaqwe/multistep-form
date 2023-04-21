@@ -3,7 +3,7 @@ import { ChangeEventHandler } from "react"
 export const Switch = ({ checked, onChange }: { checked: boolean, onChange: ChangeEventHandler<HTMLInputElement> }) => {
 
     return (
-        <div className="flex items-center justify-center gap-3 mt-auto md:mt-7 bg-neutral-150 p-3 rounded-md">
+        <div className="flex items-center justify-center gap-3 mt-7 bg-neutral-150 p-3 rounded-md">
             <p className={`text-secondary-700 min-w-[72px] md:text-lg ${!checked ? 'font-semibold' : ''}`}>Monthly</p>
             <label htmlFor="switch" className='bg-primary-900 hover:bg-primary-400 w-[42px] h-[22px] inline-block rounded-full 
         cursor-pointer relative transition-all'>
