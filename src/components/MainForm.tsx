@@ -23,9 +23,9 @@ export const MainForm = () => {
     ]
     const heightLookup: { [key: number]: string } = {
         0: '370px',
-        1: '520px',
-        2: '353px',
-        3: '303px',
+        1: '500px',
+        2: window.innerWidth < 375 ? '370px' : '339px',
+        3: window.innerWidth < 345 ? '373px' : '353px',
         4: '276px'
     }
 
@@ -34,6 +34,7 @@ export const MainForm = () => {
     const initialHeight = smallScreen ? direction >= 0 ? heightLookup[currentStepIdx - 1] : heightLookup[currentStepIdx + 1] : 'auto'
     const animateHeight = smallScreen ? heightLookup[currentStepIdx] : 'auto'
     const thankYouStepTop = !smallScreen && currentStepIdx === steps.length - 1 ? 'top-[25%] ' : ''
+
     return (
         <motion.form className={`main-form flex flex-col justify-center overflow-hidden md:h-auto relative`}
             initial={{ height: initialHeight }}
@@ -41,7 +42,7 @@ export const MainForm = () => {
         >
             <AnimatePresence custom={direction}>
                 <motion.div
-                    className={`flex flex-col w-full absolute top-0 ${thankYouStepTop}`} // if thank you step, center it
+                    className={`flex flex-col w-full absolute top-0 h-full md:h-auto ${thankYouStepTop}`} // if thank you step, center it
                     key={currentStepIdx}
                     variants={variants}
                     custom={direction}
