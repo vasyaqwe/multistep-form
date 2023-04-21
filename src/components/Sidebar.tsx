@@ -11,7 +11,7 @@ export const Sidebar = () => {
     ]
     return (
         <aside className="bg-[url('./assets/bg-sidebar-desktop.svg')] bg-no-repeat bg-cover
-        min-h-[200px] hidden md:block rounded-lg py-10 px-8 bg-primary-400
+        min-h-[200px] hidden md:block rounded-lg py-10 px-8 bg-primary-400 row-span-2
         ">
             <ol className="grid gap-8">
                 {[...Array(STEPS_COUNT).keys()].map(num => (

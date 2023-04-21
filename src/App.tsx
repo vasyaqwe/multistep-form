@@ -4,6 +4,7 @@ import { Header } from "./components/Header"
 import { useStore } from "./useStore"
 import { Sidebar } from "./components/Sidebar"
 import { MainForm } from "./components/MainForm"
+import { DesktopNavButtons } from "./components/DesktopNavButtons"
 
 function App() {
   const { formSubmitted } = useStore()
@@ -17,6 +18,7 @@ function App() {
         ">
           <Sidebar />
           <MainForm />
+          {!formSubmitted && <DesktopNavButtons />}
         </div>
         {!formSubmitted && <MobileNavButtons />}
       </main>

@@ -36,13 +36,14 @@ export const MainForm = () => {
     const thankYouStepTop = !smallScreen && currentStepIdx === steps.length - 1 ? 'top-[25%] ' : ''
 
     return (
-        <motion.form className={`main-form flex flex-col justify-center overflow-hidden md:h-auto relative`}
+        <motion.form className={`main-form flex overflow-hidden md:h-[418px] relative`}
             initial={{ height: initialHeight }}
             animate={{ height: animateHeight }}
         >
             <AnimatePresence custom={direction}>
                 <motion.div
-                    className={`flex flex-col w-full absolute top-0 h-full md:h-auto ${thankYouStepTop}`} // if thank you step, center it
+
+                    className={`flex flex-col w-full top-0 flex-1 min-w-[100%] h-full md:h-auto ${thankYouStepTop}`} // if thank you step, center it
                     key={currentStepIdx}
                     variants={variants}
                     custom={direction}
@@ -50,6 +51,7 @@ export const MainForm = () => {
                     animate="center"
                     exit="exit"
                     transition={{
+                        delay: .3,
                         x: { type: "spring", stiffness: 500, damping: 45 },
                         opacity: { duration: .3 },
                     }}
@@ -57,7 +59,6 @@ export const MainForm = () => {
                     {steps[currentStepIdx]}
                 </motion.div>
             </AnimatePresence>
-            {!formSubmitted && <DesktopNavButtons />}
         </motion.form>
     )
 }
