@@ -10,7 +10,7 @@ import { useWidth } from "./useWidth"
 
 function App() {
   const { formSubmitted, currentStepIdx } = useStore()
-  let [ref, { height }] = useMeasure()
+  const [ref, { height }] = useMeasure()
   const { smallScreen } = useWidth()
   const thankYouStepStyle = !smallScreen && currentStepIdx === 4
 

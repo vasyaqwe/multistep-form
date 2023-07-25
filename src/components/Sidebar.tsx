@@ -2,13 +2,13 @@ import { STEPS_COUNT } from "../utils"
 import { StepCircle } from "./StepCircle"
 
 export const Sidebar = () => {
-
     const stepTextLookup = [
         'Your Info',
         'Select Plan',
         'Add-ons',
         'Summary',
     ]
+
     return (
         <aside className="bg-[url('./assets/bg-sidebar-desktop.svg')] bg-no-repeat bg-cover
         min-h-[200px] hidden md:block rounded-lg py-10 px-8 bg-primary-400 row-span-2

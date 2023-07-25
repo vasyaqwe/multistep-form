@@ -37,7 +37,6 @@ export const variants = {
             zIndex: 0,
             x: direction < 0 ? 1000 : -1000,
             opacity: 0,
-            transition: { duration: .3 }
         }
     }
 }
