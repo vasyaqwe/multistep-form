@@ -1,5 +1,5 @@
 Challenge by Frontend Mentor - https://www.frontendmentor.io
 
-Me - https://www.frontendmentor.io/profile/vasyaqwe
+You can find me here - https://www.upwork.com/freelancers/~015c1b113a62e11b13
 
-Live demo - https://multi-step-form2222.netlify.app/
+Live demo - https://multistep-form-vasyaqwe.netlify.app/

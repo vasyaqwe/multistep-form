@@ -19,6 +19,26 @@ function App() {
         <>
             <Header />
             <main className="px-4 min-h-[100vh] md:grid place-items-center">
+                <p className="fixed bottom-4 left-1/2 z-[40] w-max -translate-x-1/2 rounded-md border border-primary-100 bg-primary-100/40 p-2 text-center text-xs sm:text-sm">
+                    Created by{" "}
+                    <a
+                        className="text-secondary-400 hover:underline"
+                        target="_blank"
+                        href={
+                            "https://www.upwork.com/freelancers/~015c1b113a62e11b13"
+                        }
+                    >
+                        Vasyl P
+                    </a>
+                    . Source code available on{" "}
+                    <a
+                        target="_blank"
+                        className="text-secondary-400 hover:underline"
+                        href="https://github.com/vasyaqwe/multistep-form"
+                    >
+                        GitHub
+                    </a>
+                </p>
                 <AnimatePresence initial={false}>
                     <motion.div
                         animate={{
