@@ -19,7 +19,7 @@ function App() {
         <>
             <Header />
             <main className="px-4 min-h-[100vh] md:grid place-items-center">
-                <p className="fixed bottom-4 left-1/2 z-[40] w-max -translate-x-1/2 rounded-md border border-primary-100 bg-primary-100/40 p-2 text-center text-xs sm:text-sm">
+                <p className="fixed bottom-4 left-1/2 z-[40] w-max max-md:hidden -translate-x-1/2 rounded-md border border-primary-100 bg-primary-100/40 p-2 text-center text-xs sm:text-sm">
                     Created by{" "}
                     <a
                         className="text-secondary-400 hover:underline"
